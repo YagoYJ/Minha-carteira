@@ -1,0 +1,126 @@
+/* GERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none !important;
+  text-transform: none !important;
+}
+
+/* HEADER */
+
+.menu nav {
+  background: #222 !important;
+}
+.menu nav .btnLogout {
+  font-size: 15px;
+}
+.menu nav .btnLogout:hover {
+  transform: scale(1.05);
+  color: #dc3545 !important;
+  transition: 0.2s;
+}
+.menu nav a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.menu nav a:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+/* PAGINA HOME E CADASTRO */
+
+.pagHome,
+.pagSignUp {
+  width: 60%;
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pagHome h2,
+.pagSignUp h2 {
+  text-align: center;
+}
+
+.pagHome .card,
+.pagSignUp .card {
+  width: 30rem !important;
+  position: relative;
+  top: 0;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.pagHome form label,
+.pagSignUp form label {
+  font-size: 20px;
+}
+
+.pagHome form input,
+.pagSignUp form input {
+  width: 100%;
+  border: 1px solid #cecece;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+/* PAGINAS DAS TRANSAÇÔES */
+
+.pagGeneral table,
+.pagReceived table,
+.pagSpent table,
+.pagOwing table,
+.pagInterested table {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 20px !important;
+  padding: 10px !important;
+}
+
+.pagGeneral table tr,
+.pagReceived table tr,
+.pagSpent table tr,
+.pagOwing table tr,
+.pagInterested table tr {
+  height: 60px;
+  font-size: 20px;
+  border-bottom: 1px solid #000;
+  background-color: #f3eded;
+}
+
+.pagGeneral table tr th,
+.pagReceived table tr th,
+.pagSpent table tr th,
+.pagOwing table tr th,
+.pagInterested table tr th {
+  color: #fff;
+  background-color: #222222;
+}
+
+.Recebido {
+  color: #28a745;
+}
+
+.Comprado {
+  color: #ffc107;
+}
+
+.Devendo {
+  color: #dc3545;
+}
+
+.Interesse {
+  color: #007bff;
+}

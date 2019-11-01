@@ -1,0 +1,43 @@
+<div class="pagOwing">
+    {{#if user}}
+    <h1>Devendo dinheiro</h1>
+
+    <a href="/admin/cadastro/nova-transacao/Devendo"><button class="btn btn-primary mt-4"><i class="fa fa-plus"></i>
+            Adicionar transação</button></a>
+    <hr>
+
+    {{#if transactions}}
+
+    <table class="mb-4">
+        <tr>
+            <th><i class="fa fa-calendar"></i> Data</th>
+            <th><i class="fa fa-pencil"></i> Ação</th>
+            <th><i class="fa fa-money"></i> Valor</td>
+            <th><i class="fa fa-eye"></i> Ver mais</th>
+        </tr>
+        {{#each transactions}}
+        <tr class="{{type_transaction}}">
+            <td><strong>{{date_transaction}}</strong></td>
+            <td><strong>{{action_transaction}}</strong></td>
+            <td><strong>R$ {{value_transaction}}</strong></td>
+            <td><a href="/admin/ver-mais/{{_id}}"><button class="btn btn-success">Ver mais</button></a></td>
+        </tr>
+        {{else}}
+
+        {{/each}}
+    </table>
+
+    {{else}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>Não há transações feitas.</h4>
+        </div>
+    </div>
+    {{/if}}
+</div>
+{{else}}
+<center>
+    <h2>Você precisa estar logado para acessar esta página</h2>
+    <a href="/"><button class="btn btn-primary mt-4">Clique aqui para fazer seu login</button></a>
+</center>
+{{/if}}

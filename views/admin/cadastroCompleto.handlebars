@@ -1,0 +1,38 @@
+<div class="pagNewTransaction">
+
+    <h2>Adicionar transação:</h2>
+    <hr>
+    <div class="card mt-4 mb-4">
+        <div class="card-body">
+            <form action="/admin/transaction/new" method="POST">
+                <label for="action_transaction">Ação:</label>
+                <input type="text" class="form-control mb-3" name="action_transaction" placeholder="Ação da transação"
+                    required>
+                <label for="value_transaction">Valor:</label>
+                <input type="number" class="form-control mb-3" name="value_transaction" placeholder="R$ 100.00" min="1" required>
+                <label for="origin_transaction">Origem:</label>
+                <input type="text" class="form-control mb-3" name="origin_transaction" placeholder="Origem da transação"
+                    required>
+                <label for="destiny_transaction">Destino</label>
+                <input type="text" class="form-control mb-3" name="destiny_transaction"
+                    placeholder="Destino da transação" required>
+                <label for="date_transaction">Data:</label>
+                <input type="date" class="form-control mb-3" name="date_transaction" placeholder="Data da transação"
+                    required>
+                <label for="type_transaction">Tipo:</label>
+                <select name="type_transaction" class="form-control mb-3" required>
+                    <option value="">-- SELECIONE --</option>
+                    <option value="Recebido">Recebido</option>
+                    <option value="Comprado">Comprado</option>
+                    <option value="Devendo">Devendo</option>
+                    <option value="Interesse">Interesse</option>
+                </select>
+
+
+                <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Salvar</button>
+            </form>
+        </div>
+    </div>
+
+
+</div>

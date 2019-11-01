@@ -1,0 +1,14 @@
+<div class="pagSeeMore">
+    <div class="card mt-4 mb-4">
+        <div class="card-body">
+            <h2>{{transaction.action_transaction}}</h2>
+            <p><strong>Valor:</strong> R$ {{transaction.value_transaction}}</p>
+            <small><strong>Origem:</strong> {{transaction.origin_transaction}}</small><br>
+            <small><strong>Destino:</strong> {{transaction.destiny_transaction}}</small><br>
+            <small><strong>Data:</strong> {{transaction.date_transaction}}</small><br>
+            <small><strong>Tipo de transação:</strong> {{transaction.type_transaction}}</small><br>
+            <a href="/admin/edit/{{transaction._id}}"><button class="btn btn-primary mt-4"><i
+                        class="fa fa-edit"></i> Editar</button></a>
+        </div>
+    </div>
+</div>
