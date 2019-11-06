@@ -30,7 +30,7 @@ router.get("/geral", (req, res) => {
 
 router.get("/recebidos", (req, res) => {
   Transaction.find({
-    type_transaction: "Recebido",
+    type_transaction: "table-success",
     user_transaction: res.locals.user
   })
     .then(transactions => {
@@ -44,7 +44,7 @@ router.get("/recebidos", (req, res) => {
 
 router.get("/comprados", (req, res) => {
   Transaction.find({
-    type_transaction: "Comprado",
+    type_transaction: "table-warning",
     user_transaction: res.locals.user
   })
     .then(transactions => {
@@ -58,7 +58,7 @@ router.get("/comprados", (req, res) => {
 
 router.get("/devendo", (req, res) => {
   Transaction.find({
-    type_transaction: "Devendo",
+    type_transaction: "table-danger",
     user_transaction: res.locals.user
   })
     .then(transactions => {
@@ -72,7 +72,7 @@ router.get("/devendo", (req, res) => {
 
 router.get("/interesses", (req, res) => {
   Transaction.find({
-    type_transaction: "Interesse",
+    type_transaction: "table-primary",
     user_transaction: res.locals.user
   })
     .then(transactions => {

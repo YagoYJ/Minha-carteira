@@ -82,45 +82,8 @@ a {
 .pagSpent table,
 .pagOwing table,
 .pagInterested table {
-  width: 100%;
-  text-align: center;
   border: 1px solid #000;
   border-radius: 20px !important;
   padding: 10px !important;
-}
-
-.pagGeneral table tr,
-.pagReceived table tr,
-.pagSpent table tr,
-.pagOwing table tr,
-.pagInterested table tr {
-  height: 60px;
-  font-size: 20px;
-  border-bottom: 1px solid #000;
-  background-color: #f3eded;
-}
-
-.pagGeneral table tr th,
-.pagReceived table tr th,
-.pagSpent table tr th,
-.pagOwing table tr th,
-.pagInterested table tr th {
-  color: #fff;
-  background-color: #222222;
-}
-
-.Recebido {
-  color: #28a745;
-}
-
-.Comprado {
-  color: #ffc107;
-}
-
-.Devendo {
-  color: #dc3545;
-}
-
-.Interesse {
-  color: #007bff;
+  text-align: center;
 }

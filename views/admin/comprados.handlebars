@@ -8,15 +8,15 @@
 
     {{#if transactions}}
 
-    <table class="mb-4">
+     <table class="mb-4 table">
         <tr>
-            <th><i class="fa fa-calendar"></i> Data</th>
-            <th><i class="fa fa-pencil"></i> Ação</th>
-            <th><i class="fa fa-money"></i> Valor</td>
-            <th><i class="fa fa-eye"></i> Ver mais</th>
+            <th class="table-dark"><i class="fa fa-calendar"></i> Data</th>
+            <th class="table-dark"><i class="fa fa-pencil"></i> Ação</th>
+            <th class="table-dark"><i class="fa fa-money"></i> Valor</th>
+            <th class="table-dark"><i class="fa fa-eye"></i> Ver mais</th>
         </tr>
         {{#each transactions}}
-        <tr class="{{type_transaction}}">
+        <tr class=" {{type_transaction}}">
             <td><strong>{{date_transaction}}</strong></td>
             <td><strong>{{action_transaction}}</strong></td>
             <td><strong>R$ {{value_transaction}}</strong></td>
