@@ -34,40 +34,25 @@ a {
   transition: 0.2s;
 }
 
-/* PAGINA HOME E CADASTRO */
+/* PAGINA INDEX E CADASTRO */
 
-.pagHome,
-.pagSignUp {
-  width: 60%;
-  position: relative;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.pagHome h2,
-.pagSignUp h2 {
+.pagIndex h2 {
   text-align: center;
 }
 
-.pagHome .card,
-.pagSignUp .card {
-  width: 30rem !important;
-  position: relative;
-  top: 0;
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
+.pagIndex .containerFormLogin,
+.pagIndex .containerNewAccount {
+  width: 20rem;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.pagHome form label,
+.pagIndex form label,
 .pagSignUp form label {
   font-size: 20px;
 }
 
-.pagHome form input,
+.pagIndex form input,
 .pagSignUp form input {
   width: 100%;
   border: 1px solid #cecece;
@@ -86,4 +71,56 @@ a {
   border-radius: 20px !important;
   padding: 10px !important;
   text-align: center;
+}
+
+.Interesse,
+.Interesse > th,
+.Interesse > td {
+  background-color: #8fb5dd;
+}
+
+.Interesse th,
+.Interesse td,
+.Interesse thead th,
+.Interesse tbody + tbody {
+  border-color: #8ebef1;
+}
+
+.Recebido,
+.Recebido > th,
+.Recebido > td {
+  background-color: #c3e6cb;
+}
+
+.Recebido th,
+.Recebido td,
+.Recebido thead th,
+.Recebido tbody + tbody {
+  border-color: #8fd19e;
+}
+
+.Comprado,
+.Comprado > th,
+.Comprado > td {
+  background-color: #ffeeba;
+}
+
+.Comprado th,
+.Comprado td,
+.Comprado thead th,
+.Comprado tbody + tbody {
+  border-color: #ffdf7e;
+}
+
+.Devendo,
+.Devendo > th,
+.Devendo > td {
+  background-color: #f5c6cb;
+}
+
+.Devendo th,
+.Devendo td,
+.Devendo thead th,
+.Devendo tbody + tbody {
+  border-color: #ed969e;
 }

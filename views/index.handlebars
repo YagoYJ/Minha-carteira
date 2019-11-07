@@ -1,24 +1,21 @@
-<div class="pagHome mt-4 mb-4">
+<div class="pagIndex">
     <h2>Faça seu login</h2>
 
-    <div class="card mt-4">
-        <div class="card-body ">
-            <form action="/user/login" method="POST">
-                <label for="email_user" class="formLabel">E-mail:</label>
-                <input type="email" name="email_user" class="mb-4" placeholder="Digite seu email principal" required>
-                <label for="password_user" class="formLabel">Senha:</label>
-                <input type="password" name="password_user" class="mb-4" minlength="8" placeholder="Digite sua senha" required>
-                <button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Entrar</button>
-            </form>
-        </div>
+    <div class="containerFormLogin card mt-4">
+        <form action="/user/login" method="POST">
+            <label for="email_user" class="formLabel">E-mail:</label>
+            <input type="email" name="email_user" class="mb-4" placeholder="Digite seu email principal" required>
+            <label for="password_user" class="formLabel">Senha:</label>
+            <input type="password" name="password_user" class="mb-4" minlength="8" placeholder="Digite sua senha"
+                required>
+            <button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Entrar</button>
+        </form>
     </div>
-
-    <div class="card mt-4">
-        <div class="card-body">
+    <div class="containerNewAccount card mt-4">
             <p>Não tem uma conta? Faça seu cadastro agora!</p>
             <a href="/cadastro"><button class="btn btn-primary"><i class="fa fa-user-plus"></i> Fazer
                     cadastro</button></a>
-        </div>
     </div>
+
 
 </div>
