@@ -1,37 +1,28 @@
 <div class="menu">
+    <div class="profileMenu">
+        <div class="avatar"></div>
+        <h3 class="userName">Yago</h3>
+    </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/admin/geral"><i class="fa fa-bars"></i> GERAL <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/admin/recebidos"><i class="fa fa-plus"></i> RECEBIDOS <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/admin/comprados"><i class="fa fa-minus"></i> COMPRADOS</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/admin/devendo"><i class="fa fa-times"></i> DEVENDO</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/admin/interesses"><i class="fa fa-question"></i> INTERESSES</a>
-                </li>
+    <nav>
+        <ul>
+            <li>
+                <a href="/admin/geral"><i class="fa fa-bars"></i> GERAL </a>
+            </li>
+            <li>
+                <a href="/admin/recebidos"><i class="fa fa-plus"></i> RECEBIDOS </a>
+            </li>
+            <li>
+                <a href="/admin/comprados"><i class="fa fa-minus"></i> COMPRADOS</a>
+            </li>
+            <li>
+                <a href="/admin/devendo"><i class="fa fa-exclamation-triangle"></i></i> DEVENDO</a>
+            </li>
+            <li>
+                <a href="/admin/interesses"><i class="fa fa-question"></i> INTERESSES</a>
+            </li>
 
 
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    {{!-- <a class="nav-link" href="/admin/interesses">INTERESSES</a> --}}
-                    <a href="/user/logout" class="btnLogout nav-link"><i class="fa fa-sign-out"></i> Sair</a>
-                </li>
-            </ul>
-        </div>
+        </ul>
     </nav>
 </div>
