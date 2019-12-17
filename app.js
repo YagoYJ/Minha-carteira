@@ -40,18 +40,18 @@ app.engine("handlebars", handlebars({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // mongoose:
-mongoose.Promise = global.Promise;
-mongoose
-  .connect(db.mongoURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
-  .then(() => {
-    console.log("Conectado com o BD MinhaCarteira");
-  })
-  .catch(error => {
-    console.log("Erro ao se conectar com o BD MinhaCarteira => " + error);
-  });
+// mongoose.Promise = global.Promise;
+// mongoose
+//   .connect(db.mongoURI, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+//   })
+//   .then(() => {
+//     console.log("Conectado com o BD MinhaCarteira");
+//   })
+//   .catch(error => {
+//     console.log("Erro ao se conectar com o BD MinhaCarteira => " + error);
+//   });
 
 // public:
 app.use(express.static(path.join(__dirname, "public")));

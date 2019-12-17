@@ -36,28 +36,55 @@ a {
 
 /* PAGINA INDEX E CADASTRO */
 
+.pagIndex {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./../assets/macbook-pro-on-brown-table-139387.jpg") top
+    center no-repeat;
+  background-size: cover;
+}
+
 .pagIndex h2 {
   text-align: center;
 }
 
 .pagIndex .containerFormLogin,
 .pagIndex .containerNewAccount {
-  width: 20rem;
-  margin: 0 auto;
-  padding: 20px;
+  width: 35%;
+  border-radius: 10px;
+  padding: 40px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .pagIndex form label,
-.pagSignUp form label {
-  font-size: 20px;
+.pagSignUp form label,
+.pagIndex p {
+  font-size: 30px;
+  color: #707070;
 }
 
 .pagIndex form input,
 .pagSignUp form input {
   width: 100%;
+  font-size: 20px;
   border: 1px solid #cecece;
   border-radius: 8px;
-  padding: 5px;
+  padding: 5px 10px;
+  outline: none;
+}
+
+.pagIndex form .btnLogin,
+.pagSignUp form .btnLogin,
+.pagIndex .btnSignUp,
+.pagSignUp .btnSignUp {
+  width: 100%;
+  font-size: 20px;
 }
 
 /* PAGINAS DAS TRANSAÇÔES */

@@ -1,5 +1,4 @@
 <div class="pagIndex">
-    <h2>Faça seu login</h2>
 
     <div class="containerFormLogin card mt-4">
         <form action="/user/login" method="POST">
@@ -8,14 +7,12 @@
             <label for="password_user" class="formLabel">Senha:</label>
             <input type="password" name="password_user" class="mb-4" minlength="8" placeholder="Digite sua senha"
                 required>
-            <button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Entrar</button>
+            <button type="submit" class="btn btn-success btnLogin"><i class="fa fa-sign-in"></i> Entrar</button>
         </form>
+        <hr>
+        <p>Não tem uma conta? Faça seu cadastro agora!</p>
+        <a href="/cadastro"><button class="btn btn-primary btnSignUp"><i class="fa fa-user-plus"></i> Fazer
+                cadastro</button></a>
     </div>
-    <div class="containerNewAccount card mt-4">
-            <p>Não tem uma conta? Faça seu cadastro agora!</p>
-            <a href="/cadastro"><button class="btn btn-primary"><i class="fa fa-user-plus"></i> Fazer
-                    cadastro</button></a>
-    </div>
-
 
 </div>
