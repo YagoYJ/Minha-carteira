@@ -1,10 +1,6 @@
 <div class="pagGeneral">
     {{#if user}}
-    <h1>Todas as suas transações</h1>
-
-    <a href="/admin/cadastro/nova-transacao"><button class="btn btn-primary mt-4"><i class="fa fa-plus"></i> Adicionar
-            transação</button></a>
-    <hr>
+    <h1>Geral</h1>
 
     {{#if transactions}}
 
@@ -32,6 +28,23 @@
         </div>
     </div>
     {{/if}}
+
+    <div class="card mb-4 graficContent">
+        <div class="card-body">
+            <h1>Grafic</h1>
+        </div>
+    </div>
+
+    <div class="card mb-4 addTransactionContent">
+        <div class="card-body">
+            <p class="mt-3">Fez alguma transação? Adicione agora!</p>
+            <a href="/admin/cadastro/nova-transacao"><button class="btn btn-primary btnAddTransaction"><i class="fa fa-plus"></i>
+                    Adicionar
+                    transação</button></a>
+        </div>
+    </div>
+
+
 </div>
 {{else}}
 <center>

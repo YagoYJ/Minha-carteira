@@ -141,17 +141,31 @@ a {
 .pagInterested {
   width: 85%;
   margin-left: 15%;
+  display: grid;
+  grid-template-columns: 60% 50%;
+  grid-template-rows: 10% auto;
+  grid-template-areas: "title title" "table grafic" "table addButton";
 }
-
-.pagGeneral table,
-.pagReceived table,
-.pagSpent table,
-.pagOwing table,
-.pagInterested table {
+.pagGeneral h1,
+.pagReceived h1,
+.pagSpent h1,
+.pagOwing h1,
+.pagInterested h1 {
+  color: #727272;
+  grid-area: title;
+}
+.pagGeneral .table,
+.pagReceived .table,
+.pagSpent .table,
+.pagOwing .table,
+.pagInterested .table {
+  width: 95%;
+  height: 100px !important;
   border: 1px solid #000;
-  border-radius: 20px !important;
   padding: 10px !important;
   text-align: center;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+  grid-area: table;
 }
 
 .Interesse,
@@ -204,4 +218,40 @@ a {
 .Devendo thead th,
 .Devendo tbody + tbody {
   border-color: #ed969e;
+}
+
+.pagGeneral .graficContent,
+.pagReceived .graficContent,
+.pagSpent .graficContent,
+.pagOwing .graficContent,
+.pagInterested .graficContent {
+  height: 400px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pagGeneral .addTransactionContent,
+.pagReceived .addTransactionContent,
+.pagSpent .addTransactionContent,
+.pagOwing .addTransactionContent,
+.pagInterested .addTransactionContent {
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pagGeneral .addTransactionContent p,
+.pagReceived .addTransactionContent p,
+.pagSpent .addTransactionContent p,
+.pagOwing .addTransactionContent p,
+.pagInterested .addTransactionContent p {
+  font-size: 25px;
+  color: #727272;
+}
+
+.pagGeneral .addTransactionContent .btnAddTransaction,
+.pagReceived .addTransactionContent .btnAddTransaction,
+.pagSpent .addTransactionContent .btnAddTransaction,
+.pagOwing .addTransactionContent .btnAddTransaction,
+.pagInterested .addTransactionContent .btnAddTransaction {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
 }
