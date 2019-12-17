@@ -12,21 +12,64 @@ a {
 
 /* HEADER */
 
-.menu nav {
-  background: #222 !important;
+.menu {
+  width: 20%;
+  height: 100%;
+  background: #505056;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
-.menu nav .btnLogout {
+
+.menu .profileMenu {
+  display: flex;
+  border-bottom: 2px solid #6f6f6f;
+  padding-bottom: 20px;
+}
+
+.menu .profileMenu .avatar {
+  width: 80px;
+  height: 80px;
+  margin: 10px 0;
+  border-radius: 180px;
+  background-color: #ffffff;
+}
+
+.menu .profileMenu .userName {
+  color: #ffffff;
+  margin: 50px auto auto 10px;
+}
+
+/* .menu nav .btnLogout {
   font-size: 15px;
 }
+
 .menu nav .btnLogout:hover {
   transform: scale(1.05);
   color: #dc3545 !important;
   transition: 0.2s;
+} */
+
+.menu ul {
+  list-style: none;
 }
+
+.menu ul li {
+  padding: 15px 0;
+  border-bottom: 1px solid #6f6f6f;
+}
+
+.menu ul li:hover {
+  background-color: #676565;
+}
+
 .menu nav a {
   color: #fff;
   margin: 0 10px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .menu nav a:hover {
@@ -55,11 +98,13 @@ a {
 .pagIndex .containerNewAccount {
   width: 35%;
   border-radius: 10px;
+  box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.7);
   padding: 40px;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0.95;
 }
 
 .pagIndex form label,
@@ -88,6 +133,15 @@ a {
 }
 
 /* PAGINAS DAS TRANSAÇÔES */
+
+.pagGeneral,
+.pagReceived,
+.pagSpent,
+.pagOwing,
+.pagInterested {
+  width: 85%;
+  margin-left: 15%;
+}
 
 .pagGeneral table,
 .pagReceived table,

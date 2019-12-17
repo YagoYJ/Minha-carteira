@@ -23,9 +23,6 @@ const user = require("./routes/user");
 require("./models/User");
 const User = mongoose.model("users");
 
-// config do bd:
-const db = require("./config/db");
-
 // passport
 require("./config/auth")(passport);
 
@@ -42,10 +39,13 @@ app.set("view engine", "handlebars");
 // mongoose:
 mongoose.Promise = global.Promise;
 mongoose
-  .connect("mongodb+srv://<username>:<password>@campskate-4wgyg.mongodb.net/test?retryWrites=true&w=majority", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
+  .connect(
+    "",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    }
+  )
   .then(() => {
     console.log("Conectado com o BD MinhaCarteira");
   })
