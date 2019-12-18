@@ -1,10 +1,6 @@
 <div class="pagReceived">
     {{#if user}}
-    <h1>Dinheiro recebido</h1>
-
-    <a href="/admin/cadastro/nova-transacao/Recebidos"><button class="btn btn-primary mt-4"><i class="fa fa-plus"></i>
-            Adicionar transação</button></a>
-    <hr>
+    <h1>Recebidos</h1>
 
     {{#if transactions}}
 
@@ -26,12 +22,30 @@
     </table>
 
     {{else}}
-    <div class="card mt-4">
+    <div class="card noTransaction">
         <div class="card-body">
             <h4>Não há transações feitas.</h4>
         </div>
     </div>
     {{/if}}
+
+    <div class="card graficContent">
+        <div class="card-body">
+            <h1>Grafic</h1>
+        </div>
+    </div>
+
+    <div class="card mb-4 addTransactionContent">
+        <div class="card-body">
+            <p>Fez alguma transação? Adicione agora!</p>
+            <a href="/admin/cadastro/nova-transacao"><button class="btn btn-primary btnAddTransaction"><i
+                        class="fa fa-plus"></i>
+                    Adicionar
+                    transação</button></a>
+        </div>
+    </div>
+
+
 </div>
 {{else}}
 <center>
