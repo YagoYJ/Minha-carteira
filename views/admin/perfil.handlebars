@@ -1,0 +1,33 @@
+<div class="pagProfile">
+    {{#if user}}
+
+    <button class="btnBack"><a href="/admin/geral"><i class="fa fa-chevron-left"></i></a></button>
+
+    <div class="card mainContent">
+        <div class="body-card">
+            <div class="options">
+                <i class="fa fa-user avatar"></i><br>
+                <button class="btn btn-primary btnEditAvatar"><a href="#"><i class="fa fa-camera"></i> Editar
+                        foto</a></button>
+                <button class="btn btn-primary btnEditDatas"><a href="#"><i class="fa fa-pencil"></i> Editar
+                        dados</a></button>
+            </div>
+            <hr>
+            <div class="datas">
+                <label for="name">Nome</label>
+                <input type="text" class="form-control" name="name" value="{{user.name_user}}" readonly>
+                <label for="email">E-mail</label>
+                <input type="text" class="form-control" name="email" value="{{user.email_user}}" readonly>
+            </div>
+            <hr>
+            <button class="btn btn-danger btnLogout"><a href="/user/logout"><i class="fa fa-sign-out"></i> Sair</a></button>
+        </div>
+    </div>
+
+
+    {{else}}
+    <div class="alertMessage">
+        <h2>Você precisa estar logado para acessar esta página</h2>
+        <a href="/"><button class="btn btn-primary mt-4">Clique aqui para fazer seu login</button></a>
+    </div>
+    {{/if}}

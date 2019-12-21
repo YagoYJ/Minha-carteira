@@ -14,6 +14,18 @@ const bcrypt = require("bcryptjs");
 const passport = require("passport");
 
 // ROTAS GET:
+// Perfil:
+router.get("/perfil/:id_user", (req, res) => {
+  User.findOne({ _id: req.params.id_user })
+    .then(user => {
+      res.render("admin/perfil", { user: user });
+    })
+    .catch(error => {
+      req.flash("error_msg", "Erro ao carregar o perfil => " + error);
+      res.redirect("/admin/geral");
+    });
+});
+
 // Tabelas:
 
 router.get("/geral", (req, res) => {

@@ -1,7 +1,11 @@
 <div class="menu">
     <div class="profileMenu">
-        <div class="avatar"></div>
-        <h3 class="userName">Yago</h3>
+        {{#if user}}
+        <a href="/admin/perfil/{{user._id}}">
+            <div class="avatar"></div>
+            <h3 class="userName">Yago</h3>
+        </a>
+        {{/if}}
     </div>
 
     <nav>
