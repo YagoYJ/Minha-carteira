@@ -1,7 +1,7 @@
 <div class="pagProfile">
     {{#if user}}
 
-    <button class="btnBack"><a href="/admin/geral"><i class="fa fa-chevron-left"></i></a></button>
+    <button class="btnBack" onclick="history.go(-1)"><i class="fa fa-chevron-left"></i></button>
 
     <div class="card mainContent">
         <div class="body-card">
@@ -20,7 +20,8 @@
                 <input type="text" class="form-control" name="email" value="{{user.email_user}}" readonly>
             </div>
             <hr>
-            <button class="btn btn-danger btnLogout"><a href="/user/logout"><i class="fa fa-sign-out"></i> Sair</a></button>
+            <button class="btn btn-danger btnLogout"><a href="/user/logout"><i class="fa fa-sign-out"></i>
+                    Sair</a></button>
         </div>
     </div>
 

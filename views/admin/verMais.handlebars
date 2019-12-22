@@ -1,14 +1,29 @@
 <div class="pagSeeMore">
-    <div class="card mt-4 mb-4">
-        <div class="card-body">
+    {{#if user}}
+
+    <button class="btnBack" onclick="history.go(-1)"><i class="fa fa-chevron-left"></i></button>
+
+    <div class="card mainContent">
+        <div class="body-card">
             <h2>{{transaction.action_transaction}}</h2>
-            <p><strong>Valor:</strong> R$ {{transaction.value_transaction}}</p>
-            <small><strong>Origem:</strong> {{transaction.origin_transaction}}</small><br>
-            <small><strong>Destino:</strong> {{transaction.destiny_transaction}}</small><br>
-            <small><strong>Data:</strong> {{transaction.date_transaction}}</small><br>
-            <small><strong>Tipo de transação:</strong> {{transaction.type_transaction}}</small><br>
-            <a href="/admin/edit/{{transaction._id}}"><button class="btn btn-primary mt-4"><i
-                        class="fa fa-edit"></i> Editar</button></a>
+            <hr>
+            <div class="datas">
+                <p><strong>Valor:</strong> R$ {{transaction.value_transaction}}</p>
+                <p><strong>Origem:</strong> {{transaction.origin_transaction}}</p>
+                <p><strong>Destino:</strong> {{transaction.destiny_transaction}}</p>
+                <p><strong>Data:</strong> {{transaction.date_transaction}}</p>
+                <p><strong>Tipo de transação:</strong> {{transaction.type_transaction}}</p>
+            </div>
+            <a href="/admin/edit/{{transaction._id}}"><button class="btn btn-primary btnEdit"><i class="fa fa-edit"></i>
+                    Editar</button></a>
         </div>
     </div>
 </div>
+
+
+{{else}}
+<div class="alertMessage">
+    <h2>Você precisa estar logado para acessar esta página</h2>
+    <a href="/"><button class="btn btn-primary mt-4">Clique aqui para fazer seu login</button></a>
+</div>
+{{/if}}
