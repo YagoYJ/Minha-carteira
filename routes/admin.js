@@ -32,7 +32,69 @@ router.get("/geral", (req, res) => {
   Transaction.find({ user_transaction: res.locals.user })
     .sort({ createAt: "desc" })
     .then(transactions => {
-      res.render("admin/geral", { transactions: transactions });
+      Transaction.find({
+        user_transaction: res.locals.user,
+        type_transaction: "Recebido"
+      })
+        .countDocuments()
+        .then(totReceived => {
+          Transaction.find({
+            user_transaction: res.locals.user,
+            type_transaction: "Comprado"
+          })
+            .countDocuments()
+            .then(totSpent => {
+              Transaction.find({
+                user_transaction: res.locals.user,
+                type_transaction: "Devendo"
+              })
+                .countDocuments()
+                .then(totOwing => {
+                  Transaction.find({
+                    user_transaction: res.locals.user,
+                    type_transaction: "Interesse"
+                  })
+                    .countDocuments()
+                    .then(totInterested => {
+                      res.render("admin/geral", {
+                        transactions: transactions,
+                        totReceived: totReceived,
+                        totSpent: totSpent,
+                        totOwing: totOwing,
+                        totInterested: totInterested
+                      });
+                    })
+                    .catch(error => {
+                      req.flash(
+                        "error_msg",
+                        "Erro ao carregar dados do gráfico => " + error
+                      );
+                      res.redirect("/admin");
+                    });
+                })
+                .catch(error => {
+                  req.flash(
+                    "error_msg",
+                    "Erro ao carregar dados do gráfico => " + error
+                  );
+                  res.redirect("/admin");
+                });
+            })
+            .catch(error => {
+              req.flash(
+                "error_msg",
+                "Erro ao carregar dados do gráfico => " + error
+              );
+              res.redirect("/admin");
+            });
+        })
+        .catch(error => {
+          req.flash(
+            "error_msg",
+            "Erro ao carregar dados do gráfico => " + error
+          );
+          res.redirect("/admin");
+        });
     })
     .catch(error => {
       req.flash("error_msg", "Erro ao carregar as transações => " + error);
@@ -118,16 +180,10 @@ router.get("/edit/:id_transaction", (req, res) => {
     });
 });
 
-// Cadastros:
+// Cadastro:
 
 router.get("/cadastro/nova-transacao", (req, res) => {
   res.render("admin/cadastroCompleto");
-});
-
-router.get("/cadastro/nova-transacao/:type_transaction", (req, res) => {
-  res.render("admin/cadastroGeral", {
-    type_transaction: req.params.type_transaction
-  });
 });
 
 // ROTAS POST:

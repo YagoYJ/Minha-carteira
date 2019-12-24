@@ -1,22 +1,19 @@
-<div class="pagSignUp mt-4 mb-4">
+<div class="pagSignUp">
 
-    <h2>Fazer cadastro</h2>
-    <div class="card mt-4">
-        <div class="card-body ">
-            <form action="/user/new" method="POST">
-                <label for="name_user" class="formLabel">Nome:</label>
-                <input type="text" name="name_user" class="mb-4" placeholder="Digite seu nome" required>
-                <label for="email_user" class="formLabel">E-mail:</label>
-                <input type="email" name="email_user" class="mb-4" placeholder="Digite seu email principal" required>
-                <label for="password_user" class="formLabel">Senha (mínimo 8 dígitos):</label>
-                <input type="password" name="password_user" class="mb-4" minlength="8" placeholder="Digite sua senha"
-                    required>
-                <label for="confirmPassword_user" class="formLabel">Confirmar senha:</label>
-                <input type="password" name="confirmPassword_user" class="mb-4" minlength="8"
-                    placeholder="Digite sua senha novamente" required>
-                <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Salvar</button>
-            </form>
-        </div>
+    <div class="containerFormLogin card mt-4">
+        <form action="/user/new" method="POST">
+            <label for="name_user" class="formLabel">Nome:</label>
+            <input type="text" name="name_user" class="mb-4" placeholder="Digite seu nome" required>
+            <label for="email_user" class="formLabel">E-mail:</label>
+            <input type="email" name="email_user" class="mb-4" placeholder="Digite seu email principal" required>
+            <label for="password_user" class="formLabel">Senha (mínimo 8 dígitos):</label>
+            <input type="password" name="password_user" class="mb-4" minlength="8" placeholder="Digite sua senha"
+                required>
+            <label for="confirmPassword_user" class="formLabel">Confirmar senha:</label>
+            <input type="password" name="confirmPassword_user" class="mb-4" minlength="8"
+                placeholder="Digite sua senha novamente" required>
+            <button type="submit" class="btn btn-success btnLogin"><i class="fa fa-sign-in"></i> Entrar</button>
+        </form>
     </div>
 
 </div>

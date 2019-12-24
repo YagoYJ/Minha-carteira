@@ -70,25 +70,29 @@ body {
   transition: 0.2s;
 }
 
-/* PAGINA INDEX E CADASTRO */
+/* PAGINA LOGIN*/
 
-.pagIndex {
+.pagIndex,
+.pagSignUp {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("./../assets/macbook-pro-on-brown-table-139387.jpg") top
-    center no-repeat;
+}
+
+.pagIndex {
+  background: url("./../assets/bg-Login.jpg") top center no-repeat;
   background-size: cover;
 }
 
-.pagIndex h2 {
-  text-align: center;
+.pagSignUp {
+  background: url("./../assets/bg-Cadastro.jpg") top center no-repeat;
+  background-size: cover;
 }
 
 .pagIndex .containerFormLogin,
-.pagIndex .containerNewAccount {
+.pagSignUp .containerFormLogin {
   width: 35%;
   border-radius: 10px;
   box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.7);
@@ -101,8 +105,9 @@ body {
 }
 
 .pagIndex form label,
+.pagIndex p,
 .pagSignUp form label,
-.pagIndex p {
+.pagSignUp p {
   font-size: 30px;
   color: #707070;
 }
@@ -118,9 +123,8 @@ body {
 }
 
 .pagIndex form .btnLogin,
-.pagSignUp form .btnLogin,
 .pagIndex .btnSignUp,
-.pagSignUp .btnSignUp {
+.pagSignUp form .btnLogin {
   width: 100%;
   font-size: 20px;
 }
@@ -240,6 +244,23 @@ body {
   height: 400px;
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
   margin: 0 0 10px 0;
+}
+
+.pagGeneral .graficContent h1,
+.pagReceived .graficContent h1,
+.pagSpent .graficContent h1,
+.pagOwing .graficContent h1,
+.pagInterested .graficContent h1 {
+  width: 100%;
+}
+
+.pagGeneral .graficContent .grafic,
+.pagReceived .graficContent .grafic,
+.pagSpent .graficContent .grafic,
+.pagOwing .graficContent .grafic,
+.pagInterested .graficContent .grafic {
+  width: 100%;
+  height: 300px;
 }
 
 .pagGeneral .addTransactionContent,
@@ -417,4 +438,64 @@ body {
   width: 40%;
   margin: 30px auto;
   font-size: 30px;
+}
+
+/* PÁGINA ADICIONAR/EDITAR TRANSAÇÃO */
+
+.pagEditTransaction,
+.pagNewTransaction {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #e6e6e6;
+}
+
+.pagNewTransaction .btnBack,
+.pagEditTransaction .btnBack {
+  width: 60px;
+  height: 60px;
+  color: #ffffff;
+  font-size: 40px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: none;
+  background-color: #505056;
+}
+
+.pagNewTransaction .mainContent,
+.pagEditTransaction .mainContent {
+  width: 70%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+  padding: 50px 2%;
+}
+
+.pagNewTransaction h1,
+.pagNewTransaction label,
+.pagEditTransaction h1,
+.pagEditTransaction label {
+  color: #707070;
+}
+
+.pagNewTransaction label,
+.pagEditTransaction label {
+  font-size: 20px;
+}
+
+.pagNewTransaction .btnSave,
+.pagEditTransaction .btnSave {
+  width: 30%;
+  font-size: 25px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }

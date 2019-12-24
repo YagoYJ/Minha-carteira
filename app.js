@@ -40,7 +40,7 @@ app.set("view engine", "handlebars");
 mongoose.Promise = global.Promise;
 mongoose
   .connect(
-    ,
+    "mongodb+srv://CampSkate:porquinho123@campskate-4wgyg.mongodb.net/test",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true
