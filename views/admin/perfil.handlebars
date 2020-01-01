@@ -5,19 +5,16 @@
 
     <div class="card mainContent">
         <div class="body-card">
-            <div class="options">
-                <i class="fa fa-user avatar"></i><br>
-                <button class="btn btn-primary btnEditAvatar"><a href="#"><i class="fa fa-camera"></i> Editar
-                        foto</a></button>
-                <button class="btn btn-primary btnEditDatas"><a href="#"><i class="fa fa-pencil"></i> Editar
-                        dados</a></button>
-            </div>
-            <hr>
+
             <div class="datas">
                 <label for="name">Nome</label>
                 <input type="text" class="form-control" name="name" value="{{user.name_user}}" readonly>
                 <label for="email">E-mail</label>
                 <input type="text" class="form-control" name="email" value="{{user.email_user}}" readonly>
+                <div class="options">
+                    <button class="btn btn-primary btnEditDatas"><a href="/user/editar-usuario/{{user._id}}"><i class="fa fa-pencil"></i> Editar
+                            dados</a></button>
+                </div>
             </div>
             <hr>
             <button class="btn btn-danger btnLogout"><a href="/user/logout"><i class="fa fa-sign-out"></i>

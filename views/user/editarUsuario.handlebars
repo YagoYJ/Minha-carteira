@@ -1,0 +1,22 @@
+<div class="pagEditUser">
+
+    <div class="containerFormLogin card mt-4">
+        <form action="/user/editUser" method="POST">
+            <input type="hidden" name="id" value="{{user._id}}">
+            <label for="name_user" class="formLabel">Nome:</label>
+            <input type="text" name="name_user" class="mb-4" placeholder="Digite seu nome" value="{{user.name_user}}"
+                required>
+            <label for="email_user" class="formLabel">E-mail:</label>
+            <input type="email" name="email_user" class="mb-4" placeholder="Digite seu email principal"
+                value="{{user.email_user}}" required>
+            <label for="password_user" class="formLabel">Senha (mínimo 8 dígitos):</label>
+            <input type="password" name="password_user" class="mb-4" minlength="8" placeholder="Digite sua senha"
+                value="{{user.password_user}}" required>
+            <label for="confirmPassword_user" class="formLabel">Confirmar senha:</label>
+            <input type="password" name="confirmPassword_user" class="mb-4" minlength="8"
+                placeholder="Digite sua senha novamente" required>
+            <button type="submit" class="btn btn-success btnEdit"><i class="fa fa-edit"></i> Editar</button>
+        </form>
+    </div>
+
+</div>

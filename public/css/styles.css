@@ -30,15 +30,11 @@ body {
 .menu .profileMenu {
   text-align-last: center;
   border-bottom: 2px solid #6f6f6f;
-  padding-bottom: 20px;
+  padding: 10px 0;
 }
 
-.menu .profileMenu .avatar {
-  width: 80px;
-  height: 80px;
-  margin: 10px auto;
-  border-radius: 180px;
-  background-color: #ffffff;
+.menu .profileMenu:hover {
+  background-color: #676565;
 }
 
 .menu .profileMenu .userName {
@@ -73,7 +69,8 @@ body {
 /* PAGINA LOGIN*/
 
 .pagIndex,
-.pagSignUp {
+.pagSignUp,
+.pagEditUser {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -86,13 +83,15 @@ body {
   background-size: cover;
 }
 
-.pagSignUp {
+.pagSignUp,
+.pagEditUser {
   background: url("./../assets/bg-Cadastro.jpg") top center no-repeat;
   background-size: cover;
 }
 
 .pagIndex .containerFormLogin,
-.pagSignUp .containerFormLogin {
+.pagSignUp .containerFormLogin,
+.pagEditUser .containerFormLogin {
   width: 35%;
   border-radius: 10px;
   box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.7);
@@ -107,13 +106,16 @@ body {
 .pagIndex form label,
 .pagIndex p,
 .pagSignUp form label,
-.pagSignUp p {
+.pagSignUp p,
+.pagEditUser form label,
+.pagEditUser p {
   font-size: 30px;
   color: #707070;
 }
 
 .pagIndex form input,
-.pagSignUp form input {
+.pagSignUp form input,
+.pagEditUser form input {
   width: 100%;
   font-size: 20px;
   border: 1px solid #cecece;
@@ -124,7 +126,8 @@ body {
 
 .pagIndex form .btnLogin,
 .pagIndex .btnSignUp,
-.pagSignUp form .btnLogin {
+.pagSignUp form .btnLogin,
+.pagEditUser form .btnEdit {
   width: 100%;
   font-size: 20px;
 }
@@ -327,24 +330,12 @@ body {
 }
 
 .pagProfile .mainContent .options {
-  margin-bottom: 60px;
-}
-
-.pagProfile .mainContent .options .avatar {
-  width: 120px;
-  height: 120px;
-  font-size: 100px;
-  border: 1px solid #707070;
-  border-radius: 180px;
-  margin-bottom: 20px;
-}
-
-.pagProfile .mainContent .options .btnEditAvatar {
-  margin-right: 5px;
+  width: 100%;
+  margin: 10px 0;
 }
 
 .pagProfile .mainContent .options .btnEditDatas {
-  margin-left: 5px;
+  margin: 10px auto;
 }
 
 .pagProfile .mainContent .options .btnEditAvatar a,
