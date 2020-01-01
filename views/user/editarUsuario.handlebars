@@ -1,5 +1,7 @@
 <div class="pagEditUser">
 
+    <button class="btnBack" onclick="history.go(-1)"><i class="fa fa-chevron-left"></i></button>
+
     <div class="containerFormLogin card mt-4">
         <form action="/user/editUser" method="POST">
             <input type="hidden" name="id" value="{{user._id}}">

@@ -89,6 +89,18 @@ body {
   background-size: cover;
 }
 
+.pagEditUser .btnBack {
+  width: 60px;
+  height: 60px;
+  color: #ffffff;
+  font-size: 40px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: none;
+  background-color: #505056;
+}
+
 .pagIndex .containerFormLogin,
 .pagSignUp .containerFormLogin,
 .pagEditUser .containerFormLogin {
@@ -97,9 +109,9 @@ body {
   box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.7);
   padding: 40px;
   position: relative;
-  top: 50%;
+  top: 20px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   opacity: 0.95;
 }
 
@@ -152,7 +164,7 @@ body {
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-rows: 10% auto;
-  grid-template-areas: "title title" "table grafic" "table addButton";
+  grid-template-areas: "title title" "table addButton" "table grafic";
   grid-gap: 5%;
 }
 
@@ -169,7 +181,7 @@ body {
 .pagSpent .table,
 .pagOwing .table,
 .pagInterested .table {
-  margin: 0 10px auto 10px;
+  margin: 30px 10px auto 10px;
   border: 1px solid #000;
   text-align: center;
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
@@ -182,7 +194,7 @@ body {
 .pagOwing .noTransaction,
 .pagInterested .noTransaction {
   max-height: 80px;
-  margin: 0 10px auto 10px;
+  margin: 30px 10px auto 10px;
   text-align: center;
   grid-area: table;
 }
@@ -272,7 +284,7 @@ body {
 .pagOwing .addTransactionContent,
 .pagInterested .addTransactionContent {
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
-  margin: 10px 0 auto 0;
+  margin: 30px 0 auto 0;
 }
 
 .pagGeneral .addTransactionContent p,
