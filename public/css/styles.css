@@ -66,6 +66,60 @@ body {
   transition: 0.2s;
 }
 
+/* HEADER RESPONSIVO */
+
+#toggleMenu {
+  width: 90px;
+  height: 90px;
+  margin: 20px auto auto 90%;
+  color: #ffffff;
+  font-size: 60px;
+  text-align: center;
+  line-height: 90px;
+  position: absolute;
+  border: none;
+  background-color: #505056;
+  z-index: 6;
+  display: none;
+}
+
+.menuResponsive {
+  width: 100%;
+  height: 100%;
+  margin-left: -110%;
+  text-align: center;
+  background-color: rgb(80, 80, 86, 0.95);
+  z-index: 5;
+  position: absolute;
+  display: none;
+}
+
+.visible {
+  margin-left: 0;
+}
+
+.menuResponsive .profileMenu {
+  width: 80%;
+  margin: 10px 10% 20px;
+  padding: 20px 0;
+  border-bottom: 3px solid #cecece;
+}
+
+.menuResponsive .profileMenu a h3 {
+  color: #ffffff;
+  font-size: 60pt;
+}
+
+.menuResponsive nav ul li {
+  padding: 20px 0;
+  border-bottom: 1px solid #cecece;
+}
+
+.menuResponsive nav ul li a {
+  font-size: 40pt;
+  color: #ffffff;
+}
+
 /* PAGINA LOGIN*/
 
 .pagIndex,
@@ -251,31 +305,18 @@ body {
   border-color: #ed969e;
 }
 
-.pagGeneral .graficContent,
-.pagReceived .graficContent,
-.pagSpent .graficContent,
-.pagOwing .graficContent,
-.pagInterested .graficContent {
+.pagGeneral .graficContent {
   height: 400px;
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
   margin: 0 0 10px 0;
 }
 
-.pagGeneral .graficContent h1,
-.pagReceived .graficContent h1,
-.pagSpent .graficContent h1,
-.pagOwing .graficContent h1,
-.pagInterested .graficContent h1 {
+.pagGeneral .graficContent h1 {
   width: 100%;
 }
 
-.pagGeneral .graficContent .grafic,
-.pagReceived .graficContent .grafic,
-.pagSpent .graficContent .grafic,
-.pagOwing .graficContent .grafic,
-.pagInterested .graficContent .grafic {
-  width: 100%;
-  height: 300px;
+.pagGeneral .graficContent .grafic {
+  max-width: 100%;
 }
 
 .pagGeneral .addTransactionContent,
@@ -501,4 +542,132 @@ body {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+/* RESPONSIVO */
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  body {
+    grid-template-columns: 100%;
+    grid-template-areas: "page";
+  }
+  /* Menu */
+  .menu {
+    display: none;
+  }
+
+  /* Menu Responsivo */
+
+  .menuResponsive,
+  #toggleMenu {
+    display: block;
+  }
+
+  /* Login */
+
+  .pagIndex .containerFormLogin,
+  .pagSignUp .containerFormLogin,
+  .pagEditUser .containerFormLogin {
+    width: 70%;
+  }
+
+  /* Transações */
+  .pagGeneral,
+  .pagReceived,
+  .pagSpent,
+  .pagOwing,
+  .pagInterested {
+    margin-top: 100px;
+    grid-area: page;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% auto auto auto;
+    grid-template-areas: "title" "table" "addButton" "grafic";
+    grid-gap: 0;
+  }
+
+  .pagGeneral .table,
+  .pagReceived .table,
+  .pagSpent .table,
+  .pagOwing .table,
+  .pagInterested .table {
+    margin: 10px auto;
+  }
+
+  .pagGeneral .noTransaction,
+  .pagReceived .noTransaction,
+  .pagSpent .noTransaction,
+  .pagOwing .noTransaction,
+  .pagInterested .noTransaction {
+    max-height: 80px;
+    margin: 30px 10px auto 10px;
+    text-align: center;
+    grid-area: table;
+  }
+
+  .pagGeneral .graficContent .grafic {
+    max-width: 100%;
+    height: 90%;
+  }
+
+  .pagGeneral .addTransactionContent,
+  .pagReceived .addTransactionContent,
+  .pagSpent .addTransactionContent,
+  .pagOwing .addTransactionContent,
+  .pagInterested .addTransactionContent {
+    margin: 10px 0;
+  }
+
+  /* Perfil */
+
+  .pagProfile .mainContent .datas {
+    padding: 20px 10%;
+  }
+
+  .pagProfile .mainContent .btnLogout {
+    width: 80%;
+  }
+
+  /* Informações da transação */
+
+  .pagSeeMore .mainContent {
+    padding: 20px 5%;
+  }
+
+  .pagSeeMore .mainContent .btnEdit {
+    width: 50%;
+  }
+
+  /* PÁGINA ADICIONAR/EDITAR TRANSAÇÃO */
+
+  .pagNewTransaction .mainContent,
+  .pagEditTransaction .mainContent {
+    width: 80%;
+    padding: 50px 5%;
+  }
+
+  .pagNewTransaction h1,
+  .pagNewTransaction label,
+  .pagEditTransaction h1,
+  .pagEditTransaction label {
+    font-size: 40pt;
+  }
+
+  .pagNewTransaction label,
+  .pagEditTransaction label {
+    font-size: 25pt;
+  }
+
+  .pagNewTransaction .btnSave,
+  .pagEditTransaction .btnSave {
+    width: 40%;
+    font-size: 25pt;
+    margin: 20px 0;
+  }
+
+  .pagNewTransaction input,
+  .pagEditTransaction input {
+    font-size: 22pt;
+  }
 }

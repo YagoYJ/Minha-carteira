@@ -27,3 +27,51 @@
         </ul>
     </nav>
 </div>
+
+<div class="menuResponsive" id="menuResponsive">
+    <nav>
+        <div class="profileMenu">
+            {{#if user}}
+            <a href="/admin/perfil/{{user._id}}">
+                <h3 class="userName">{{user.name_user}}</h3>
+            </a>
+            {{/if}}
+        </div>
+        <ul>
+            <li>
+                <a href="/admin/geral"><i class="fa fa-bars"></i> GERAL </a>
+            </li>
+            <li>
+                <a href="/admin/recebidos"><i class="fa fa-plus"></i> RECEBIDOS </a>
+            </li>
+            <li>
+                <a href="/admin/comprados"><i class="fa fa-minus"></i> COMPRADOS</a>
+            </li>
+            <li>
+                <a href="/admin/devendo"><i class="fa fa-exclamation-triangle"></i></i> DEVENDO</a>
+            </li>
+            <li>
+                <a href="/admin/interesses"><i class="fa fa-question"></i> INTERESSES</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<i class="fa fa-bars" id="toggleMenu"></i>
+
+<script>
+    var toggle = document.getElementById("toggleMenu");
+    var menu = document.getElementById("menuResponsive");
+
+    toggle.addEventListener("click", function () {
+        menu.classList.toggle("visible");
+
+        if (toggle.className == "fa fa-bars") {
+            toggle.classList.remove("fa-bars");
+            toggle.classList.add("fa-times");
+        } else if (toggle.className == "fa fa-times") {
+            toggle.classList.remove("fa-times");
+            toggle.classList.add("fa-bars");
+        }
+    });
+</script>
