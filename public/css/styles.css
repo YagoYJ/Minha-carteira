@@ -671,3 +671,200 @@ body {
     font-size: 22pt;
   }
 }
+
+/* Celular */
+
+@media screen and (max-width: 500px) {
+  /* HEADER RESPONSIVO */
+
+  #toggleMenu {
+    width: 60px;
+    height: 60px;
+    margin: 20px auto auto 85%;
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .menuResponsive .profileMenu a h3 {
+    color: #ffffff;
+    font-size: 35pt;
+  }
+
+  .menuResponsive nav ul li a {
+    font-size: 30pt;
+  }
+
+  /* Login */
+
+  .pagEditUser .btnBack {
+    width: 60px;
+    height: 60px;
+    color: #ffffff;
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border: none;
+    background-color: #505056;
+  }
+
+  .pagIndex form label,
+  .pagIndex p,
+  .pagSignUp form label,
+  .pagSignUp p,
+  .pagEditUser form label,
+  .pagEditUser p {
+    font-size: 20px;
+  }
+
+  .pagIndex form input,
+  .pagSignUp form input,
+  .pagEditUser form input {
+    font-size: 15px;
+  }
+
+  .pagIndex form .btnLogin,
+  .pagIndex .btnSignUp,
+  .pagSignUp form .btnLogin,
+  .pagEditUser form .btnEdit {
+    font-size: 15px;
+  }
+
+  /* Perfil */
+
+  .pagProfile .btnBack {
+    width: 40px;
+    height: 40px;
+    font-size: 18pt;
+  }
+
+  .pagProfile .mainContent {
+    width: 60%;
+    margin-bottom: 0;
+    left: 20%;
+    padding: 10px 0;
+  }
+
+  .pagProfile .mainContent .options {
+    width: 100%;
+    margin: 0;
+  }
+
+  .pagProfile .mainContent .options .btnEditDatas {
+    width: 100%;
+    margin: 10px auto 0;
+  }
+
+  .pagProfile .mainContent .options .btnEditDatas a {
+    font-size: 17pt;
+  }
+
+  .pagProfile .mainContent .datas {
+    padding: 5px 10%;
+  }
+
+  .pagProfile .mainContent .datas label {
+    font-size: 22pt;
+  }
+
+  .pagProfile .mainContent .datas input {
+    font-size: 18pt;
+  }
+
+  .pagProfile .mainContent .btnLogout {
+    margin-top: 5px;
+  }
+
+  .pagProfile .mainContent .btnLogout a {
+    font-size: 20pt;
+  }
+
+  /* Informações da transação */
+
+  .pagSeeMore .btnBack {
+    width: 40px;
+    height: 40px;
+    font-size: 18pt;
+  }
+
+  .pagSeeMore .mainContent {
+    width: 60%;
+    left: 20%;
+    padding: 20px 5%;
+  }
+
+  .pagSeeMore .mainContent h2 {
+    font-size: 18pt;
+  }
+
+  .pagSeeMore .mainContent .datas p {
+    font-size: 12pt;
+  }
+
+  .pagSeeMore .mainContent .btnEdit {
+    width: 100%;
+    font-size: 15pt;
+  }
+
+  /* PÁGINA ADICIONAR/EDITAR TRANSAÇÃO */
+
+  .pagNewTransaction .btnBack,
+  .pagEditTransaction .btnBack {
+    width: 40px;
+    height: 40px;
+    font-size: 18pt;
+  }
+
+  .pagNewTransaction .mainContent,
+  .pagEditTransaction .mainContent {
+    width: 60%;
+    padding: 50px 5%;
+  }
+
+  .pagNewTransaction h1,
+  .pagNewTransaction label,
+  .pagEditTransaction h1,
+  .pagEditTransaction label {
+    font-size: 22pt;
+  }
+
+  .pagNewTransaction label,
+  .pagEditTransaction label {
+    font-size: 20pt;
+  }
+
+  .pagNewTransaction input,
+  .pagEditTransaction input {
+    font-size: 18pt;
+  }
+
+  .pagNewTransaction .btnSave,
+  .pagEditTransaction .btnSave {
+    width: 100%;
+    font-size: 22pt;
+  }
+
+  /* Editar usuário */
+
+  .pagEditUser .btnBack {
+    width: 40px;
+    height: 40px;
+    font-size: 18pt;
+  }
+
+  .pagEditUser .containerFormLogin {
+    width: 60%;
+  }
+}
+
+/* Ajustando o gráfico */
+
+@media screen and (max-width: 400px) {
+  .graficContent h1 {
+    font-size: 20pt;
+  }
+
+  .grafic {
+    max-height: 90%;
+  }
+}
